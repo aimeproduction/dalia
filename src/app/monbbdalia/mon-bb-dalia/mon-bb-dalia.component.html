@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div class="test">
+  <div class="te">
+    <br><br>
+    <h1> Bonne et Heureuse<br> St. Valentin Mon bb!</h1>
+  </div><br><br>
+  <div class="tt">
+
+    C'est super que tu sois déjà arrivée<br> jusqu'ici !
+    Clique sur le bouton ci-dessous<br> pour continuer
+    <br><br>
+    <p-button class="tu" label="Suivant" (click)="etapeUne()" [disabled]="disabledButton"></p-button>
+  </div>
+
+  <div class="t1" *ngIf="showEtapeUne">
+
+    1- Comment se prénomme la dulcinée de<br> Mickayel ?<br>
+    <input type="text" pInputText [(ngModel)]="value" />
+    <br><br>
+    <p-button class="un" label="verifier ma reponse" (click)="etapeUneCheck()" [disabled]="disabledButton0"></p-button>
+    <p class="p1">{{errorMessage}}</p>
+  </div>
+
+  <div class="t2" *ngIf="showEtapeDeux">
+
+    Parfait ! Il m'a chargé de te dire<br> que tu lui manques beaucoup !<br><br>
+    <p-button class="tu" label="Suivant" (click)="etapeDeux()" [disabled]="disabledButton1"></p-button>
+  </div>
+  <br><br>
+  <div class="t2" *ngIf="showEtapeTrois">
+    2- Quel est ton combat ?<br>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Choisir une option"></p-dropdown>
+    <br><br>
+    <p-button class="un"  [disabled]="showEtapeDix" label="verifier ma reponse" (click)="etapeDeuxCheck()"></p-button><br>
+    <p class="p1" *ngIf="showErrorMessage1">
+      Donc je crée mon jeu et toi tu viens dire<br> que c'est ton école ton combat hein. Tu<br> vas lire l'heure et caller à ce niveau.
+</p><br>
+    <p class="p10" *ngIf="showErrorMessage2">Ca fait chaud au coeur de savoir que je<br> suis ton Combat.
+      Mais toi tu n'est plus au<br> niveau d'être mon combat, tu es<br> deja ma <strong>guerre!</strong></p><br>
+    <p-button class="tu" *ngIf="showErrorMessage2" label="Suivant" (click)="etapeTrois()" [disabled]="disabledButton2"></p-button>
+
+  </div><br>
+  <div class="t2" *ngIf="showEtapeQuatre">
+    4- Qu'aurais-tu aimé faire aujourd'hui ?<br>
+    <input type="text" pInputText [(ngModel)]="value2" /><br><br>
+    <p-button class="tu" label="Suivant" (click)="etapeQuatre()" [disabled]="disabledButton3"></p-button><br><br>
+  </div>
+  <div class="t2" *ngIf="showEtapeCinq">
+    Ton message a bien été enregistré!<br><br>
+    <p-button class="tu" label="Voir mots de fin" (click)="etapeCinq()" [disabled]="disabledButton4"></p-button>
+  <p>{{lastMessage}}</p>
+    <p class="last">{{lastMessage2}}</p>
+    <p class="last">{{lastMessage3}}</p>
+    <p class="blink" *ngIf="dernier">Bonne fête, i love you!</p>
+  </div>
+</div>
+</body>
+</html>

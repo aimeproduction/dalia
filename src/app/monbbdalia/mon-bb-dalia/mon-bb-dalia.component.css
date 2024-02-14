@@ -1,0 +1,38 @@
+body{
+  background-image: url("/assets/images/imag.jpg");
+  background-position: center; /* Positions the background image in the center */
+  height: auto;
+}
+.test{
+  color: white;
+  margin-left: -40px;
+  height: 200vh;
+  width: 140%;
+
+}
+h1, .te{
+  margin-left: 5.5%;
+}
+.tt, .t1, .t2{
+  margin-left: 10%;
+}
+.tu{
+  margin-left: 25%;
+}
+.p1{
+  color: black;
+}
+.last{
+  color: yellow;
+}
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  font-size: 22px;
+  margin-left: 10%;
+}
